@@ -1,5 +1,7 @@
 import pandas as pd
-balls=pd.read_csv("IPL_Ball_by_Ball_2008_2022.csv")
+# Extract
+from src.extract import extract_raw_ball_data
+balls=extract_raw_ball_data()
 # Batting
 Runs=balls.groupby(["ID","batter"])["batsman_run"].sum().reset_index().rename(columns={"batsman_run":"Batsman_Runs"})
 balls_count=balls[~balls["extra_type"].isin(["wides"])]
@@ -129,7 +131,9 @@ Players=Players[["ID","Players","Bat_Score","Bowling_Score","Fielding_Score"]].f
 # Final Score
 Players["Score"]=Players["Bat_Score"]+Players["Bowling_Score"]+Players["Fielding_Score"]
 Players
-
+# Load
+from src.load import load_dream11_points
+load_dream11_points(Players)
 
 
 

@@ -3,7 +3,6 @@ import pandas as pd
 from sqlalchemy import create_engine
 import os
 # Extraction Function
-
 def extract_raw_ball_data(
     table_name: str = "raw_ipl_ball_by_ball"
 ) -> pd.DataFrame:
@@ -26,7 +25,3 @@ def extract_raw_ball_data(
 
     return df
 
-if __name__ == "__main__":
-    df = extract_raw_ball_data()
-    print(df.head())
-    print(f"Rows extracted: {len(df)}")

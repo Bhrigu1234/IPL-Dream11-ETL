@@ -1,8 +1,7 @@
-# Import Library
 import pandas as pd
 from sqlalchemy import create_engine
 import os
-# Creating the Loading Functions
+
 def load_dream11_points(df: pd.DataFrame):
     # Warehouse DB connection details
     host = os.getenv("WH_DB_HOST")

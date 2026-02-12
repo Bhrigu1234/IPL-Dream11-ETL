@@ -18,23 +18,25 @@ Source → Transform → Warehouse
 
 ## 📂 Project Structure
 
+```
 IPL-Dream11-ETL/
-│
 ├── src/
-│ ├── extract.py # Data extraction logic
-│ ├── transform.py # Dream11 points calculation
-│ └── load.py # Load into warehouse
+│   ├── extract.py
+│   ├── transform.py
+│   └── load.py
 │
 ├── data/
-│ ├── raw/ # Raw data (ignored in Git)
-│ ├── processed/ # Cleaned intermediate data
+│   ├── raw/
+│   ├── processed/
 │
 ├── outputs/
-│ └── dream11_points.csv
+│   └── dream11_points.csv
 │
-├── notebooks/ # Development notebooks
+├── notebooks/
 ├── requirements.txt
 └── README.md
+```
+
 
 ## 🛠️ Tech Stack
 
